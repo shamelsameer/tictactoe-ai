@@ -1,6 +1,6 @@
 import pygame
-from x-o_grid import Grid
-import minimax-ai-no_optimizations
+from grid import Grid
+import minimax
 
 surface = pygame.display.set_mode((600,600))
 pygame.display.set_caption("Tic-Tac-Toe")
@@ -26,8 +26,8 @@ def game_loop():
                         if ai.terminal(grid.matrix):
                             grid.draw(surface)
                         else:
-                            act =  minimax-ai-no_optimizations.minimax(grid.matrix)
-                            grid.matrix =  minimax-ai-no_optimizations.result(grid.matrix,act)
+                            act =  minimax.minimax(grid.matrix)
+                            grid.matrix =  minimax.result(grid.matrix,act)
                             
         surface.fill((0,0,0))
 

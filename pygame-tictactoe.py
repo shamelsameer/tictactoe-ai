@@ -45,14 +45,14 @@ def intro():
                 quit()
         surface.fill((200,200,200))
         pygame.font.init() 
-        myfont = pygame.font.SysFont('Comic Sans MS', 100)
+        myfont = pygame.font.SysFont('Roboto', 100)
         textsurface3 = myfont.render('Tic-Tac-Toe', False, (200, 0, 200))
         surface.blit(textsurface3,(125,225))
         
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
 
-        if 250+100 > mouse[0] > 250 and 350+50 > mouse[1] > 350:
+        if (250+100 > mouse[0] > 250) and (350+50 > mouse[1] > 350):
             pygame.draw.rect(surface, (100,100,100), (250,350,100,50))
             if click[0] == 1:
                 game_loop()

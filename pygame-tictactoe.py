@@ -23,7 +23,7 @@ def game_loop():
                         x=pygame.mouse.get_pos()[0]//200
                         y=pygame.mouse.get_pos()[1]//200
                         grid.play(x,y, player)
-                        if ai.terminal(grid.matrix):
+                        if minimax.terminal(grid.matrix):
                             grid.draw(surface)
                         else:
                             act =  minimax.minimax(grid.matrix)
